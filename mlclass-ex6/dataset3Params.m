@@ -24,9 +24,32 @@ sigma = 0.3;
 %
 
 
+%trials = [0.01; 0.03; 0.1; 0.3; 1; 3; 10; 30 ];
+%len = length(trials)
 
+%evec = zeros(len*len,3);
 
+%k=0
+%for i=1:len
+%  for j=1:len
+%    k = k+1
+%    C = trials(i);
+%    sigma = trials(j);
+%    evec(k,1) = C;
+%    evec(k,2) = sigma;
+%    model = svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma)); 
+%    pred  = svmPredict(model,Xval);
+%    perr  = mean(double(pred ~= yval));
+%    evec(k,3) = perr;
+%  endfor
+%endfor
 
+%[ minval, imin ] = min(evec(:,3));
+
+%[C, sigma] = evec(imin,1:2);
+
+C = 1.00000;
+sigma = 0.10000;
 
 
 % =========================================================================
