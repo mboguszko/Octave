@@ -98,7 +98,7 @@ pause;
 %% ============= Part 4: K-Means Clustering on Pixels ===============
 %  In this exercise, you will use K-Means to compress an image. To do this,
 %  you will first run K-Means on the colors of the pixels in the image and
-%  then you will map each pixel on to it's closest centroid.
+%  then you will map each pixel on to its closest centroid.
 %  
 %  You should now complete the code in kMeansInitCentroids.m
 %
@@ -106,10 +106,10 @@ pause;
 fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
 
 %  Load an image of a bird
-A = double(imread('bird_small.png'));
+% A = double(imread('bird_small.png'));
 
 % If imread does not work for you, you can try instead
-%   load ('bird_small.mat');
+   load ('bird_small.mat');
 
 A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
 

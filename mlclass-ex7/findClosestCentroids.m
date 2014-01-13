@@ -22,12 +22,24 @@ idx = zeros(size(X,1), 1);
 %
 
 
+m = size(X,1);
+k = size(centroids,1);
+for i=1:m
+  x = X(i,:);
+  x2 = zeros(size(centroids));
+  for j = 1:k
+    x2(j,:) = x;
+  endfor
+  a = x2 - centroids;
+  [ vmin, imin ] = min(diag(a*a'));
+  idx(i) = imin;
+endfor
+  
 
 
 
 
 
 % =============================================================
-
 end
 

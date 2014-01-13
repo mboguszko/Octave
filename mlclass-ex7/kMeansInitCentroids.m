@@ -14,11 +14,12 @@ centroids = zeros(K, size(X, 2));
 %
 
 
+% m = size(X,1);
+% i = round(rand(K,1)*(m-1)+1);
+% centroids = X(i,:);
 
-
-
-
-
+randidx = randperm(size(X,1));
+centroids = X(randidx(1:K),:);
 
 % =============================================================
 
